@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="stnc" translate="label" sortOrder="10">
+            <label>Stnc</label>
+        </tab>
+        <section id="stncbase" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Beon Mobile Core</label>
+            <tab>stnc</tab>
+            <resource>Stnc_Base::base_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0"
+                   showInStore="0">
+                <label>General Configuration</label>
+
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0"
+                       showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+
+                <field id="display_text" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0"
+                       showInStore="0">
+                    <label>Display Text</label>
+                    <comment>This text will display on the frontend.</comment>
+                </field>
+
+
+            </group>
+
+
+            <group id="productPageSetting" translate="label" sortOrder="140" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Product Page Setting</label>
+
+                <field id="porto_zoom_enable" translate="label" type="select" sortOrder="1" showInDefault="1"
+                       showInWebsite="0" showInStore="0">
+                    <label>Zoom Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="product_page_specs_block" translate="label" type="text" sortOrder="1" showInDefault="1"
+                       showInWebsite="0" showInStore="0">
+                    <label>Product Page Spec block id</label>
+                    <comment>Ürün detay sayfaında görünen specs sayfası</comment>
+                </field>
+
+                <field id="product_page_warranty_block" translate="label" type="text" sortOrder="1" showInDefault="1"
+                       showInWebsite="0" showInStore="0">
+                    <label>Product Page warranty block id</label>
+                    <comment>Ürün detay sayfasında görünen warranty logo sayfalarınnın block sayfası</comment>
+                </field>
+
+            </group>
+
+            <group id="ExamplePageSetting" translate="label" sortOrder="140" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Exa mple Setting</label>
+
+
+                <field id="option" type="select" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Options Example</label>
+                    <source_model>Stnc\Base\Model\Config\Source\Option</source_model>
+                    <config_path>stncbase/general/option</config_path>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+
+
+                <field id="secret" type="obscure" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Secret</label>
+                    <validate>required-entry</validate>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                    <config_path>stncbase/general/secret</config_path>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+
+
+            </group>
+
+        </section>
+    </system>
+</config>

@@ -1,0 +1,28 @@
+{
+    "name": "stnc/zohoinventory",
+    "description": "",
+
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "GPL",
+    "authors": [
+        {
+          "name": "Zoho ınventory api",
+          "email": "selmantunc@gmail.com",
+          "homepage": "https://www.selmantunc.com",
+          "role": "Leader"
+        }
+    ],
+
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Stnc\\Base\\": ""
+        }
+    }
+}
+
+
+

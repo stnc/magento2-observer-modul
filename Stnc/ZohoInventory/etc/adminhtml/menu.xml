@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Stnc_ZohoInventory::zohoo_configuration" title="Configuration" module="Stnc_ZohoInventory" sortOrder="30" parent="Stnc_Base::base" resource="Stnc_Base::base"/>
+        <add id="Stnc_ZohoInventory::manage_config" title="zoho Configuration" module="Stnc_ZohoInventory" sortOrder="99" parent="Stnc_ZohoInventory::zohoo_configuration" action="adminhtml/system_config/edit/section/stnczoho" resource="Stnc_ZohoInventory::base_configuration"/>
+    </menu>
+</config>

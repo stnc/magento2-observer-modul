@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <!--<head>-->
+        <!--<css src="Stnc_Base::css/BeonMobile_override.css"/>-->
+    <!--</head>-->
+    <referenceContainer name="after.body.start">
+        <block class="Magento\Framework\View\Element\Template" name="custom.js" template="Stnc_Base::custom_js.phtml"/>
+    </referenceContainer>
+</page>

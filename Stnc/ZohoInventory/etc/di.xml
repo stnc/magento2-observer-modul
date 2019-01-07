@@ -1,0 +1,23 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="Stnc_ZohoInventory_post_listing_data_source" xsi:type="string">Stnc\ZohoInventory\Model\ResourceModel\Post\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Stnc\ZohoInventory\Controller\Index\Example">
+        <plugin name="Stnc_ZohoInventory_Plugin" type="Stnc\ZohoInventory\Plugin\ExamplePlugin" sortOrder="10" disabled="false"  />
+    </type>
+
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="hello" xsi:type="object">Stnc\ZohoInventory\Console\Hello</item>
+            </argument>
+        </arguments>
+    </type>
+
+</config>

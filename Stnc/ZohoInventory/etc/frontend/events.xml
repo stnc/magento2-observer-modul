@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:noNamespaceSchemaLocation='urn:magento:framework/Event/etc/events.xsd'>
+    <event name='checkout_onepage_controller_success_action'>
+        <!--sales_order_save_after-->
+        <!--https://mage2-blog.com/magento-2-get-order-submission/
+        https://magento.stackexchange.com/questions/106956/how-to-get-complete-order-array-in-observer-with-event-checkout-onepage-controll
+https://magento.stackexchange.com/questions/246877/how-to-get-order-information-from-event-checkout-onepage-controller-success-acti
+https://magento.stackexchange.com/questions/204624/get-order-in-observer-after-placing-order
+https://magento.stackexchange.com/questions/144164/how-to-get-customer-details-in-checkout-onepage-controller-success-action-observ
+        -->
+        <observer name='Stnc_ZohooInventory'
+                instance='Stnc\ZohoInventory\Observer\ZohooInventory'
+                disabled = "false"/>
+    </event>
+</config>
+
+

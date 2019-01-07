@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    require([
+        'jquery'
+    ], function ($) {
+        $(document).ready(function () {
+            //HeADER SEARCH
+            $(".stnc-beon-header .search-input-close").click(function () {
+                //   alert ("sdsds");
+                $(this).removeClass('close-search');
+                $(this).hide();
+                $('#search').hide();
+                $('#search_autocomplete').hide();
+            });
+
+            $(".stnc-beon-header .beon-search > a").click(function () {
+                $('.stnc-beon-header .search-input-close').show();
+                $('#search').show();
+                $('#search_autocomplete').show();
+                $(".stnc-beon-header .search-input-close").addClass('close-search');
+            });
+
+            $(".stnc-beon-header.page-header .nav-sections-item-title:last-child").hide();
+
+
+//product detail view write a review button
+            $(".catalog-product-view .toggle-prod-review-btn").off("click").on("click", function () {
+                $(".page-main .column .review-add").show();
+                $(this).hide();
+            });
+
+
+        });
+
+    });
+</script>
+

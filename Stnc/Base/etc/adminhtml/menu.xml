@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Stnc_Base::base" title="BEon Mobile" module="Stnc_Base" sortOrder="10" dependsOnModule="Stnc_Base" resource="Stnc_Base::base"/>
+        <add id="Stnc_Base::hello_configuration" title="Base Configuration" module="Stnc_Base" sortOrder="20" parent="Stnc_Base::base" action="adminhtml/system_config/edit/section/stncbase" resource="Stnc_Base::base_configuration"/>
+    </menu>
+</config>
